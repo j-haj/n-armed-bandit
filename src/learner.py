@@ -17,7 +17,7 @@ class StationaryQLearner():
         '''
         self.n = n
         self.tau = tau
-        self.q_table = np.array([0 for i in range(n)])
+        self.q_table = np.array([0. for i in range(n)])
         self.q_actions = np.array([0 for i in range(n)])
 
     def generate_action(self):
