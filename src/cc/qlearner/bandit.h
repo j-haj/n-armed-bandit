@@ -1,9 +1,14 @@
 #ifndef BANDIT_H__
 #define BANDIT_H__
 
+#include <ostream>
+#include <vector>
+
+#include "mathutil.h"
+
 class Bandit {
  public:
-   Bandit(size_t n);
+  Bandit(size_t n);
   /**
    * Samples from the bandit's distribution
    *
@@ -12,6 +17,10 @@ class Bandit {
    * @returns reward value from distribution
    */
   double draw(size_t n);
+
+  inline std::vector<Distribution> distributions() const noexcept { return distributions_; }
+
+  friend std::ostream& operator<<(std::ostream& os, const Bandit& o);
 
  private:
   /// Number of arms

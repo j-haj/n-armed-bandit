@@ -9,6 +9,7 @@ struct Distribution {
   double stddev;
 };  // struct Distribution
 
+namespace math {
 /**
  * Returns a value x ~ U(0,1), where x is a real.
  */
@@ -45,5 +46,6 @@ int sample_dist(const std::vector<double>& dist);
  *
  * @returns a vector of values summing to one, computed via the softmax function
  */
-std::vector<double> softmax(const std::vector<Distribution>& v);
+std::vector<double> softmax(const std::vector<double>& v, const double scale=1.0);
+}  // namespace math
 #endif  // MATHUTIL_H__
