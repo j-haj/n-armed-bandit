@@ -1,3 +1,0 @@
-/home/jhaj/src/github/n-armed-bandit/src/cc/build/CMakeFiles/rebuild_cache.dir
-/home/jhaj/src/github/n-armed-bandit/src/cc/build/CMakeFiles/experiment.dir
-/home/jhaj/src/github/n-armed-bandit/src/cc/build/CMakeFiles/edit_cache.dir
