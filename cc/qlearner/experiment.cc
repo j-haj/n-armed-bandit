@@ -6,7 +6,7 @@
 int main(int argc, char* argv[]) {
   auto bandit (Bandit(10));
   std::cout << "Created bandit\n";
-  auto learner (StationaryQLearner(10));
+  auto learner (StationaryQLearner(10, 100));
   std::cout << "Created stationary Q-learner\n";
   for (size_t i = 0; i < 50000; ++i) {
     auto action = learner.generate_action();

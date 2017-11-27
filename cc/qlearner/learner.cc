@@ -9,7 +9,7 @@ StationaryQLearner::StationaryQLearner(size_t n, double tau)
     : QLearner(n), tau_(tau) {}
 
 void StationaryQLearner::learn(int action, double reward) noexcept {
-  auto k = q_actions_[action];
+  const auto k = q_actions_[action];
   q_table_[action] = q_table_[action] + (1. / k) * (reward - q_table_[action]);
 }
 

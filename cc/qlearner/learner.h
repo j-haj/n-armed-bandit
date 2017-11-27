@@ -36,7 +36,7 @@ class QLearner {
 
 class StationaryQLearner : public QLearner {
  public:
-  StationaryQLearner(size_t n, double tau = .1);
+  StationaryQLearner(size_t n, double tau = 5);
 
   /**
    * Generates an action for the learner to take based on the softmax function

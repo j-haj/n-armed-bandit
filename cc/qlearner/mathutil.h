@@ -22,10 +22,18 @@ double uniform();
  * @param mean the mean of the gaussian
  * @param stddev the standard deviation of the gaussian
  *
- * @return a sample x ~ N(mean, stddev)
+ * @returns a sample x ~ N(mean, stddev)
  */
 double normal(double mean, double stddev);
 
+/**
+ * Returns the cumulative distribution of the given probability distribution.
+ *
+ * @param dist a probability distribution
+ *
+ * @returns the CDF of the given probability distribution
+ */
+std::vector<double> convert_to_cdf(const std::vector<double>& dist);
 /**
  * Returns a sample drawn uniformly from the given distribution.
  *
